@@ -9,7 +9,15 @@ const Timer = () => {
     let interval;
     if (start) {
       interval = setInterval(() => {
-        setTime((prev) => prev - 1000 >= 0 || 0);
+        setTime((prev) => {
+          let newTime = prev - 1;
+          console.log("prev", newTime);
+          if (newTime < 0) {
+            clearInterval(interval);
+            return 0;
+          }
+          return newTime;
+        });
       }, 1000);
     }
     return () => clearInterval(interval);
@@ -17,7 +25,7 @@ const Timer = () => {
 
   const onStart = () => {
     setStart(true);
-    setTime(inputRef.current.value || 0);
+    setTime((inputRef.current.value || 0) * 60);
   };
 
   const onPause = () => {
@@ -26,21 +34,34 @@ const Timer = () => {
 
   const onReset = () => {
     inputRef.current.value = "";
+    setTime(0);
     setStart(false);
   };
 
   const formatString = () => {
-    // const minutes =
+    console.log("insid this time", time);
+    const hours = Math.floor(time / 3600);
+    const minutes = Math.floor((time % 3600) / 60);
+    const seconds = time % 60;
+
+    return `${hours > 9 ? hours : "0" + hours}:${
+      minutes > 9 ? minutes : "0" + minutes
+    }:${seconds > 9 ? seconds : "0" + seconds} `;
   };
 
   return (
     <div>
-      <input ref={inputRef} placeholder="Please Enter time on minutes" />
+      <input
+        ref={inputRef}
+        placeholder="Enter Minutes"
+        style={{ padding: "0.3rem" }}
+      />
       <div>
         <button onClick={onStart}>Start</button>
         <button onClick={onPause}>{start ? "Pause" : "Resume"}</button>
         <button onClick={onReset}>reset</button>
       </div>
+      <b>{formatString()}</b>
     </div>
   );
 };

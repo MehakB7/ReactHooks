@@ -11,7 +11,6 @@ const Timer = () => {
       interval = setInterval(() => {
         setTime((prev) => {
           let newTime = prev - 1;
-          console.log("prev", newTime);
           if (newTime < 0) {
             clearInterval(interval);
             return 0;
@@ -39,7 +38,6 @@ const Timer = () => {
   };
 
   const formatString = () => {
-    console.log("insid this time", time);
     const hours = Math.floor(time / 3600);
     const minutes = Math.floor((time % 3600) / 60);
     const seconds = time % 60;

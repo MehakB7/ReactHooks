@@ -1,6 +1,7 @@
 import Canvas from "./components/Canvas";
 import Counter from "./components/Counter";
 import Timer from "./components/Timer";
+import Home from "./components/UserEdit";
 
 export const examples = [
     {
@@ -13,13 +14,18 @@ export const examples = [
     {
 
         title: "useEffect Hook Timer",
-        desc: "Created a basic Counter which can be start, paused and reset",
+        desc: "A basic Counter which can be start, paused and reset",
         component: <Timer />
     },
     {
         title: "useRef Hook",
-        desc: "Created a basic drawing app which uses use Ref to create refernce ",
+        desc: "A drawing app which uses use Ref to create refernce ",
         component: <Canvas />
+    },
+    {
+        title: "useContext Hook",
+        desc: "A basic details component",
+        component: <Home />
     }
 
 ]

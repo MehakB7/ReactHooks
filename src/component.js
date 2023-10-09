@@ -2,6 +2,7 @@ import Canvas from "./components/Canvas";
 import Counter from "./components/Counter";
 import Timer from "./components/Timer";
 import Home from "./components/UserEdit";
+import Basket from "./components/Basket";
 
 export const examples = [
     {
@@ -22,10 +23,16 @@ export const examples = [
         desc: "A drawing app which uses use Ref to create refernce ",
         component: <Canvas />
     },
+
     {
         title: "useContext Hook",
         desc: "A basic details component",
         component: <Home />
+    },
+    {
+        title: "useReducer Hook",
+        desc: "A basic details component",
+        component: <Basket />
     }
 
 ]

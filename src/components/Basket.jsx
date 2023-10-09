@@ -1,7 +1,6 @@
 import React, { useReducer } from "react";
 
 const reducerFun = (state, action) => {
-  console.log("inside this reducer fn");
   let index, item;
   switch (action.type) {
     case "ADD_TO_BASKET":

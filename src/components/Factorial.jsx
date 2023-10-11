@@ -11,29 +11,35 @@ const Factorial = () => {
 
   const calcualtedValue = useMemo(() => {
     const calculate = (value) => {
-      console.log("value os", memo[value]);
-      if (value <= 1) {
+      if (value <= 0) {
         return 1;
       } else if (memo[value]) {
         return memo[value];
       } else {
-        memo[value] = value * calculate(value - 1);
+        const ans = parseInt(value) * calculate(value - 1);
+        memo[value] = ans;
+        return ans;
       }
     };
 
     calculate(value);
+
     return memo[value];
   }, [value]);
 
   return (
     <div>
       <input
+        type="range"
         placeholder="Enter the number to calculate factorial"
         value={value}
         onChange={onChange}
+        min={0}
+        max={21}
       />
 
-      <p> value is {calcualtedValue}</p>
+      <p> value is {value}</p>
+      <p> factorial is {calcualtedValue}</p>
     </div>
   );
 };

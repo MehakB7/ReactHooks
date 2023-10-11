@@ -3,6 +3,7 @@ import Counter from "./components/Counter";
 import Timer from "./components/Timer";
 import Home from "./components/UserEdit";
 import Basket from "./components/Basket";
+import Factorial from "./components/Factorial";
 
 export const examples = [
     {
@@ -33,6 +34,11 @@ export const examples = [
         title: "useReducer Hook",
         desc: "A basic details component",
         component: <Basket />
+    },
+    {
+        title: "useMemo Hook",
+        desc: "A basic Memo component",
+        component: <Factorial />
     }
 
 ]

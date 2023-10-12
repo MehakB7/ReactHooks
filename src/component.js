@@ -4,6 +4,8 @@ import Timer from "./components/Timer";
 import Home from "./components/UserEdit";
 import Basket from "./components/Basket";
 import Factorial from "./components/Factorial";
+import Scroller from "./components/Scroll";
+import Defer from "./components/Defer";
 
 export const examples = [
     {
@@ -39,6 +41,17 @@ export const examples = [
         title: "useMemo Hook",
         desc: "A basic Memo component",
         component: <Factorial />
+
+    },
+    {
+        title: "useImperitiveHandler Hook",
+        desc: "A basic Scroller with buttons component",
+        component: <Scroller />
+    },
+    {
+        title: "useDeferredValue Hook",
+        desc: "A basic Scroller with buttons component",
+        component: <Defer />
     }
 
 ]

@@ -6,6 +6,7 @@ import Basket from "./components/Basket";
 import Factorial from "./components/Factorial";
 import Scroller from "./components/Scroll";
 import Defer from "./components/Defer";
+import Listing from "./components/Listing";
 
 export const examples = [
     {
@@ -52,6 +53,11 @@ export const examples = [
         title: "useDeferredValue Hook",
         desc: "A basic Scroller with buttons component",
         component: <Defer />
+    },
+    {
+        title: "useTranslation Hook",
+        desc: "A basic List with search",
+        component: <Listing />
     }
 
 ]

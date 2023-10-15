@@ -6,7 +6,7 @@ import Basket from "./components/Basket";
 import Factorial from "./components/Factorial";
 import Scroller from "./components/Scroll";
 import Defer from "./components/Defer";
-import Listing from "./components/Listing";
+import Listing from "./components/Listing.jsx";
 
 export const examples = [
     {

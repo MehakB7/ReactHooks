@@ -7,6 +7,7 @@ import Factorial from "./components/Factorial";
 import Scroller from "./components/Scroll";
 import Defer from "./components/Defer";
 import Listing from "./components/Listing.jsx";
+import SoundPlayerWrapper from "./components/SoundPlayer";
 
 export const examples = [
     {
@@ -58,6 +59,11 @@ export const examples = [
         title: "useTranslation Hook",
         desc: "A basic List with search",
         component: <Listing />
+    },
+    {
+        title: "Audio Contoller",
+        desc: "A basic audio controller using Imperitive handler",
+        component: <SoundPlayerWrapper />
     }
 
 ]
